@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+        <meta charset="utf-8" />
+        <title>Tutorial mit David Kalinsky Tag 2</title>
+        <link rel="stylesheet" href="http://bjil-wunder.de/theme/css/main.css" />
+        <link href="http://bjil-wunder.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="BJIL Wunder Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://bjil-wunder.de/">BJIL Wunder Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="http://bjil-wunder.de/category/rtos.html">RTOS</a></li>
+                    <li><a href="http://bjil-wunder.de/category/vim.html">Vim</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://bjil-wunder.de/RTOS3.html" rel="bookmark"
+           title="Permalink to Tutorial mit David Kalinsky Tag 2">Tutorial mit David Kalinsky Tag 2</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-02-29T10:20:00">
+                Mi 29 Februar 2012
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://bjil-wunder.de/author/bernd-wunder.html">Bernd Wunder</a>
+        </address>
+<p>In <a href="http://bjil-wunder.de/category/rtos.html">RTOS</a>. </p>
+<p>tags: <a href="http://bjil-wunder.de/tag/echtzeit.html">Echtzeit</a><a href="http://bjil-wunder.de/tag/rtos.html">RTOS</a><a href="http://bjil-wunder.de/tag/embeddedworld.html">embeddedworld</a><a href="http://bjil-wunder.de/tag/realtime.html">realtime</a><a href="http://bjil-wunder.de/tag/tutorial.html">tutorial</a></p>
+</footer><!-- /.post-info -->      <h1>Tutorial mit David Kalinsky Tag 2</h1>
+<p>Da ich gestern so begeistert von der Einführung von David Kalinsky war, habe ich
+heute seine Class "Software Design for Multicore Systems -- 2012 Edition"
+besucht. Gerade sitze ich im Zug nach Hause und ziehe kurz mein Fazit vom heutigen Tag. 
+Mal sehn wie weit ich komme ... noch 30 min</p>
+<h2>Mutlicore VS verteiltes System</h2>
+<p>Multicore und verteilte Systeme sind grundsätzlich sehr ähnlich, aber nicht gleich! 
+Viele Konzepte und Grundlagen für verteilte System sind schon 30 Jahre alt und 
+können erstaunlicherweise übernommen werden. </p>
+<p>Aber es gibt einige grundlegende Unterschiede: </p>
+<ul>
+<li>Der Systemtakt liegt bei Multicore Prozessoren um den
+Faktor 100 kleiner als bei verteilten Systemen. Ein Tick bei einem Multicore 
+liegt ca. bei 100nsec-1µsec; bei einem Verteilten System bei 10µsec-1msec.</li>
+<li>Die Bandbreite innerhalb eines Multicore-Prozessors ist deutlich höher 
+  (1Gbit/s VS 100 Gbit/s)</li>
+<li>Multicore Prozessoren besitzen eine zuverlässige physikalischen Schicht. 
+  Verteilte Systeme können hingegen der physikalischen Schicht nicht "trauen" 
+  und müssen zusätzlichen Sicherungsmechanismen implementiern. So werden 
+  Prüfsummen, Redundance, Arbittierungsverfahren, ... verwendet die 
+  zusätzlich Bandbreite benötigen. </li>
+<li>In verteilten Systemen ist die Anzahl der Prozessoren nicht konstant, beim
+  Multicore dagegen schon. Das größte verteilte System der Welt ist das Internet. 
+  An diesem Beispiel kann man sich schön die heterogene und varibale Struktur 
+  veranschaulichen. </li>
+<li>Die Topologie/Architektur in einem verteilten System ist sehr variabel. 
+  Anhand eines Mobilfunknetzes kann man sich das ganz gut veranschaulichen. 
+  Es ändern sich ständig die Anzahl der Teilnehmer und die verwendeten Geräte.
+  Bei einem Multicore dagegen ist diese an die vorhandene Hardware gebunden
+  und damit fest. </li>
+<li>Software in den einzelnen Teilsystemen ist bei verteilten Systemen 
+  inconsistent. Es gibt verschiedene Rechner mit unterschiedlichen 
+  Softwareständen, OS, ... 
+  Beim Multicore ist die Software auf den Prozeßoren konsitent. </li>
+</ul>
+<p>... 15 min </p>
+<h2>AMP VS SMP</h2>
+<p>AMP steht für Asymmetric Multi-Processing und SMP steht für Symmetric Multi-Processing. 
+Diese beiden Begriffe haben sich heute durch den ganzen Tag gezogen. Als erstes muss
+man sich klar machen, dass die Begriffe von unterschiedlichen Personon anders betrachtet
+werden. So sieht ein Hardware Designer, ein OS-Programmieren und ein Softwareentwickler 
+den Begriff jeweils anders. </p>
+<ul>
+<li>
+<p><b>Hardware Designer</b>: Ein SMP-Core ist für dies Gruppe ein Multicore Prozessor bei dem die 
+einzelnen Cores völlig identisch sind. Identisch bedeutet, das jeder Prozessor denselben
+Hardwareaufbau hat, also die gleichen Hardwarekomponenten besitzt. D.h. in einem 
+n-Mulit-Core gibt es also genau n gleiche Prozessoren. Dagegen ist
+ein AMP ein Multicore System das aus verschiedenen Prozessoren besteht. Z.B. eine 
+general-perpose CPU und ein oder mehrere DSPs, wie z.B. der Infinieon TriCore, 
+Mikroautobox oder der Multicore Chip in der Playstation.</p>
+</li>
+<li>
+<p><b>Softwareentwickler</b>: Diese Gruppe denkt in Tasks. Kann ein Task auf einer beliebigen
+CPU laufen ist es für den Softwareentwickler ein SMP System, auch wenn das darunter
+liegende System verschiedene Cores besitzt. Analoges gilt für die ASP. D.h. bei einem
+SMP kann der Task einmal auf dem Core 1 laufen und das nächste mal auf Core 2. 
+Bei einem AMP läuft der Task immer auf einem festen Core. </p>
+</li>
+<li>
+<p><b>Betriebsystemprogrammierer</b> haben wieder eine andere Sichtweise. Ein SMP bedeutes 
+  für den OS-Entwickler ein System, welches das Scheduling für mehrere Cores übernimmt. 
+  Ein AMP OS meint, dass jeder Core für sich selbst ein Scheduling durchführt. </p>
+</li>
+</ul>
+<p>... 1 min</p>
+<h2>Amdahl's Law</h2>
+<p>Amdahl's Law besagt, dass mit steigender Anzahl der Rechenkerne die gesamte zur Verfügung 
+stehende Rechenleistung nichtlinear skalliert. 
+... morgen mehr ...</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://bjil-wunder.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

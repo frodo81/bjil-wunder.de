@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>BJIL Wunder Blog</title><link href="http://bjil-wunder.de/" rel="alternate"></link><link href="http://bjil-wunder.de/feeds/all.atom.xml" rel="self"></link><id>http://bjil-wunder.de/</id><updated>2012-03-03T10:20:00+01:00</updated><entry><title>ST_Vim</title><link href="http://bjil-wunder.de/vim_slug.html" rel="alternate"></link><updated>2012-03-03T10:20:00+01:00</updated><author><name>Bernd Wunder</name></author><id>tag:bjil-wunder.de,2012-03-03:vim_slug.html</id><summary type="html">&lt;h1&gt;Vim, der etwas andere Editor&lt;/h1&gt;
+&lt;p&gt;Heute möchte ich ein wenig über den legendären Vim Editor berichten. &lt;/p&gt;
+&lt;h2&gt;Warum sollte man den den Vim Editor verwenden?&lt;/h2&gt;
+&lt;p&gt;Damit man einen ersten Eindruck von den Vorteilen von Vim bekommt, kann man sich folende Videos auf YouTube ansehen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/watch?v=71YTkxUNwmg"&gt;Vi - Vim Tutorial. Howto video for the amazing vim editor.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/watch?v=_galFWwSDt0&amp;amp;feature=related"&gt;Top Vim Plugins&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Das Bedienkonzept&lt;/h3&gt;
+&lt;p&gt;Das Bedienkonzept von Vim ist rein auf die Tastatur ausgelegt. Es soll ein bestmöglicher Schreibfluss erreicht werden. Es soll vermieden werden komplizierte Tastaturverränkungen für die Befehlseingabe durchzuführen. Die 10 Finger werden bei der Bedienung von Vim so eingesetzt, dass der natürliche Schreibfluss kaum unterbrochen wird. Durch das Konzept von Vim können mit viel Übung extreme Bearbeitungsgeschwindigkeiten von Dateien erreicht werden. &lt;/p&gt;
+&lt;h3&gt;Übung macht den Meister&lt;/h3&gt;
+&lt;p&gt;Aufgrund der vielen neuen Befehle und des ungewohnten Bedienkonzeptes ist der Umgang mit Vim für viele Benutzer nicht so einfach zu erlernen wie herkömmliche Editoren. Deswegen werden die Vorteile von Vim erst nach einer gewissen Lernphase für den Benutzer spürbar. &lt;/p&gt;
+&lt;h3&gt;Vi bzw. Vim auf jedem Unix/Linux System verfügbar&lt;/h3&gt;
+&lt;p&gt;Einer der beiden Editoren ist auf jedem unixoiden System verfügbar. Auf vielen Serversystemen gibt es häufig nur wenige Editoren vorinstalliert. Vi bzw. Vim ist in der Regel auf all diesen Systemen vorhanden.&lt;/p&gt;</summary><category term="vim"></category><category term="tutorial"></category></entry><entry><title>Tutorial mit David Kalinsky Tag 3</title><link href="http://bjil-wunder.de/RTOS4.html" rel="alternate"></link><updated>2012-03-01T10:20:00+01:00</updated><author><name>Bernd Wunder</name></author><id>tag:bjil-wunder.de,2012-03-01:RTOS4.html</id><summary type="html">&lt;h1&gt;Tutorial mit David Kalinsky Tag 3&lt;/h1&gt;
+&lt;p&gt;Heute am letzten Tag der Embedded World 2012 habe ich die 3. Class von Dr. David Kalinsky besucht. Das Thema heute war "Fault Tolerant System Design". &lt;/p&gt;
+&lt;h2&gt;Fault Tolerant VS Safty&lt;/h2&gt;
+&lt;p&gt;Zu Beginn der Veranstalltung wurde der Unterschied zwischen einem fehlertoleranten System und einem für
+sicherheitskritischen Anwendungen unterschieden und auf Überschneidungen hingewiesen. &lt;/p&gt;
+&lt;h2&gt;High Avalibility&lt;/h2&gt;
+&lt;p&gt;Fehlertolerante Systeme werden über ihre Verfügbarkeit in verschiedene Klassen eingeteilt. &lt;/p&gt;
+&lt;h2&gt;Fault Tree Entwicklung&lt;/h2&gt;
+&lt;p&gt;Bevor mit dem Systemdesign begonnen wird sollte erst eine Fehleranlayse erstellt werden. 
+Dazu schlug David folgendes Vorgehen vor: 
+&lt;em&gt; Eine Stunde Brainstorming mit möglichst vielen Personen aus unterschiedlichen Professions
+&lt;/em&gt; Alle möglichen auftrettenden Fehler werden auf ein Withebord geschrieben. 
+&lt;em&gt; Anschließend markiert jeder die 10 wichtigsten Punkte. Je mehr Markierungen, 
+  desto kritischer scheint der Fehler zu sein.&lt;br /&gt;
+&lt;/em&gt; Einteilung der Fehler in entsprechende Kategorieen. Dabei entsteht ein Fehlerbaum mit 
+  mehreren Leveln. Je weiter die Verzweigung desto spezifischer ist das Problem. 
+&lt;em&gt; Verbindung der Baumelemente mit und oder oder Verbindungen.
+&lt;/em&gt; Zuteilung einer Wahrscheinlichkeit wie häufig der Fehler auftretten kann für jeden 
+  einzelnen Fehler. Die Wahrscheinlichkeiten für die höheren Knoten können aus den 
+  niedrigeren Knoten berechnet werden.&lt;/p&gt;</summary><category term="Echtzeit"></category><category term="RTOS"></category><category term="embeddedworld"></category><category term="realtime"></category><category term="tutorial"></category></entry><entry><title>Tutorial mit David Kalinsky Tag 2</title><link href="http://bjil-wunder.de/RTOS3.html" rel="alternate"></link><updated>2012-02-29T10:20:00+01:00</updated><author><name>Bernd Wunder</name></author><id>tag:bjil-wunder.de,2012-02-29:RTOS3.html</id><summary type="html">&lt;h1&gt;Tutorial mit David Kalinsky Tag 2&lt;/h1&gt;
+&lt;p&gt;Da ich gestern so begeistert von der Einführung von David Kalinsky war, habe ich
+heute seine Class "Software Design for Multicore Systems -- 2012 Edition"
+besucht. Gerade sitze ich im Zug nach Hause und ziehe kurz mein Fazit vom heutigen Tag. 
+Mal sehn wie weit ich komme ... noch 30 min&lt;/p&gt;
+&lt;h2&gt;Mutlicore VS verteiltes System&lt;/h2&gt;
+&lt;p&gt;Multicore und verteilte Systeme sind grundsätzlich sehr ähnlich, aber nicht gleich! 
+Viele Konzepte und Grundlagen für verteilte System sind schon 30 Jahre alt und 
+können erstaunlicherweise übernommen werden. &lt;/p&gt;
+&lt;p&gt;Aber es gibt einige grundlegende Unterschiede: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Der Systemtakt liegt bei Multicore Prozessoren um den
+Faktor 100 kleiner als bei verteilten Systemen. Ein Tick bei einem Multicore 
+liegt ca. bei 100nsec-1µsec; bei einem Verteilten System bei 10µsec-1msec.&lt;/li&gt;
+&lt;li&gt;Die Bandbreite innerhalb eines Multicore-Prozessors ist deutlich höher 
+  (1Gbit/s VS 100 Gbit/s)&lt;/li&gt;
+&lt;li&gt;Multicore Prozessoren besitzen eine zuverlässige physikalischen Schicht. 
+  Verteilte Systeme können hingegen der physikalischen Schicht nicht "trauen" 
+  und müssen zusätzlichen Sicherungsmechanismen implementiern. So werden 
+  Prüfsummen, Redundance, Arbittierungsverfahren, ... verwendet die 
+  zusätzlich Bandbreite benötigen. &lt;/li&gt;
+&lt;li&gt;In verteilten Systemen ist die Anzahl der Prozessoren nicht konstant, beim
+  Multicore dagegen schon. Das größte verteilte System der Welt ist das Internet. 
+  An diesem Beispiel kann man sich schön die heterogene und varibale Struktur 
+  veranschaulichen. &lt;/li&gt;
+&lt;li&gt;Die Topologie/Architektur in einem verteilten System ist sehr variabel. 
+  Anhand eines Mobilfunknetzes kann man sich das ganz gut veranschaulichen. 
+  Es ändern sich ständig die Anzahl der Teilnehmer und die verwendeten Geräte.
+  Bei einem Multicore dagegen ist diese an die vorhandene Hardware gebunden
+  und damit fest. &lt;/li&gt;
+&lt;li&gt;Software in den einzelnen Teilsystemen ist bei verteilten Systemen 
+  inconsistent. Es gibt verschiedene Rechner mit unterschiedlichen 
+  Softwareständen, OS, ... 
+  Beim Multicore ist die Software auf den Prozeßoren konsitent. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;... 15 min &lt;/p&gt;
+&lt;h2&gt;AMP VS SMP&lt;/h2&gt;
+&lt;p&gt;AMP steht für Asymmetric Multi-Processing und SMP steht für Symmetric Multi-Processing. 
+Diese beiden Begriffe haben sich heute durch den ganzen Tag gezogen. Als erstes muss
+man sich klar machen, dass die Begriffe von unterschiedlichen Personon anders betrachtet
+werden. So sieht ein Hardware Designer, ein OS-Programmieren und ein Softwareentwickler 
+den Begriff jeweils anders. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Hardware Designer&lt;/b&gt;: Ein SMP-Core ist für dies Gruppe ein Multicore Prozessor bei dem die 
+einzelnen Cores völlig identisch sind. Identisch bedeutet, das jeder Prozessor denselben
+Hardwareaufbau hat, also die gleichen Hardwarekomponenten besitzt. D.h. in einem 
+n-Mulit-Core gibt es also genau n gleiche Prozessoren. Dagegen ist
+ein AMP ein Multicore System das aus verschiedenen Prozessoren besteht. Z.B. eine 
+general-perpose CPU und ein oder mehrere DSPs, wie z.B. der Infinieon TriCore, 
+Mikroautobox oder der Multicore Chip in der Playstation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Softwareentwickler&lt;/b&gt;: Diese Gruppe denkt in Tasks. Kann ein Task auf einer beliebigen
+CPU laufen ist es für den Softwareentwickler ein SMP System, auch wenn das darunter
+liegende System verschiedene Cores besitzt. Analoges gilt für die ASP. D.h. bei einem
+SMP kann der Task einmal auf dem Core 1 laufen und das nächste mal auf Core 2. 
+Bei einem AMP läuft der Task immer auf einem festen Core. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;b&gt;Betriebsystemprogrammierer&lt;/b&gt; haben wieder eine andere Sichtweise. Ein SMP bedeutes 
+  für den OS-Entwickler ein System, welches das Scheduling für mehrere Cores übernimmt. 
+  Ein AMP OS meint, dass jeder Core für sich selbst ein Scheduling durchführt. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;... 1 min&lt;/p&gt;
+&lt;h2&gt;Amdahl's Law&lt;/h2&gt;
+&lt;p&gt;Amdahl's Law besagt, dass mit steigender Anzahl der Rechenkerne die gesamte zur Verfügung 
+stehende Rechenleistung nichtlinear skalliert. 
+... morgen mehr ...&lt;/p&gt;</summary><category term="Echtzeit"></category><category term="RTOS"></category><category term="embeddedworld"></category><category term="realtime"></category><category term="tutorial"></category></entry><entry><title>Tutorial mit David Kalinsky</title><link href="http://bjil-wunder.de/RTOS2.html" rel="alternate"></link><updated>2012-02-28T10:20:00+01:00</updated><author><name>Bernd Wunder</name></author><id>tag:bjil-wunder.de,2012-02-28:RTOS2.html</id><summary type="html">&lt;h1&gt;Tutorial mit David Kalinsky&lt;/h1&gt;
+&lt;p&gt;Diese Woche findet zum 10 mal die Embedded World statt. Natürlich bin ich wieder
+mit dabei. Ich besuche den Kurs "Introduction to Real Time Operation Systems" 
+von David Kalinsky. &lt;/p&gt;
+&lt;p&gt;Hier poste ich eine kleine Zusammenfassung des Kursinhaltes: 
+Zu Beginn haben wir über die Aufgaben eines RTOS gesprochen. Die wichtigsten 
+Aufgaben sind: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Die absolut wichtigste Aufgabe ist das Taskmanagement. Wenn man dieses nicht 
+   benötigt, dann braucht man auch kein OS!&lt;/li&gt;
+&lt;li&gt;Dynamische Speicherreservierung, malloc, free und so Zeug&lt;/li&gt;
+&lt;li&gt;Ein- und Ausgabeschnittstellten (I/O-Interfaces)&lt;/li&gt;
+&lt;li&gt;Intertaskkomunikation, Synchronisation&lt;/li&gt;
+&lt;li&gt;Timer, der den Grundtakt für die Tasks angibt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Task Schedulers&lt;/h2&gt;
+&lt;p&gt;Der wichtigste Part innerhalb des Taskmanagement ist der Task Scheduler. 
+Die Aufgabe des Schedulers ist die Berechnung des nächsten auszuführenden
+Tasks. D.h. Welchem Task wird als nächstes Prozessorzeit zugewiesen. &lt;/p&gt;
+&lt;p&gt;Dabei gibt es eine Reihe unterschiedlicher Algorithmen nach denen die Tasks 
+Rechenzeit zugewiesen bekommen: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Endless Loop&lt;/li&gt;
+&lt;li&gt;Basic Cyclic Executive&lt;/li&gt;
+&lt;li&gt;Time-Driven Cyclic Executive&lt;/li&gt;
+&lt;li&gt;Multi-rate Cyclic Executive&lt;/li&gt;
+&lt;li&gt;Multi-rate Executive for Periodic Tasks&lt;/li&gt;
+&lt;li&gt;Multi-rate Executive with Interrupts&lt;/li&gt;
+&lt;li&gt;Priority-based Preemptive Scheduling&lt;/li&gt;
+&lt;li&gt;Deadline Scheduling Strategies (EDF, LL, MUF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Informationen über Tasks&lt;/h2&gt;
+&lt;p&gt;Bevor man mit dem Design des eigentlichen RTOS anfangen kann, muss man die
+Aufgaben des Systems in möglichst kleine Einzelaufgaben zerlegen. Diese 
+einzelnen möglichst kleinen Aufgaben (engl. chunks) werden dann Tasks genannt.&lt;/p&gt;
+&lt;p&gt;Ein Task hat dabei einige Eigenschaften. So besitzt jeder Task eine eindeutige
+ID, Priorität, Type, Stack, Laufzeit, Deadline, Debuginformationen, ... &lt;/p&gt;
+&lt;p&gt;Es gibt verschiedene Kategorien:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Software-triggerd Tasks&lt;/li&gt;
+&lt;li&gt;Background Task(s)&lt;/li&gt;
+&lt;li&gt;Interrupt-handling Tasks&lt;/li&gt;
+&lt;li&gt;Periodic Tasks&lt;/li&gt;
+&lt;li&gt;Phantom Tasks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Jeder Task besitzt verschiedene Zustände während er ausgeführt wird. 
+Dies kann mit einem Zustandsautomaten (Stateflow) abgebildet werden. 
+Es gibt verschieden Möglichkeiten die Zustände eins Tasks 
+einzuteilen. Die einfachste Art besteht aus 3 Zuständen: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ready: Der Task ist für bereit ausgeführt zu werden. Er hat alle notwendigen
+     Resourcen für die Ausführung für sich reserviert.&lt;/li&gt;
+&lt;li&gt;Running: Der Task erhält den Prozessor und wird darauf ausgeführt. &lt;/li&gt;
+&lt;li&gt;Blocked: Es fehlen die benötigten Resourcen oder der Task wird von einem höher
+       priorisierten Task verdrängt. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Task Kommuniktaion / Synchronisation&lt;/h2&gt;
+&lt;p&gt;In einem System werden die Aufgaben in möglichst kleine Tasks aufgeteilt die 
+gut durch einen Programmierer abgearbeitet werden können. Durch diese Konstruktion des RTOS, muss jeder Task mit anderen Tasks kommunizieren können um da er ja 
+nur eine bestimmte Aufgabe des Gesamtsystems lösen kann. Diese Ergebnis muss er an andere Tasks weitergeben. &lt;/p&gt;
+&lt;p&gt;In einem Real Time Operation System gibt es grundlegend Elemente um eine 
+sog. Intertaskkomunikation zu ermöglichen. D.h. einen Informationsaustausch
+zwischen zwei oder mehreren Tasks innerhalb eines Systems.&lt;/p&gt;
+&lt;p&gt;Wir haben dabei die folgenden Verfahren besprochen: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;"Indirect" Message Passing&lt;/li&gt;
+&lt;li&gt;"Direct" Message Passing&lt;/li&gt;
+&lt;li&gt;Semaphoren&lt;/li&gt;
+&lt;li&gt;Resource Monitor Tasks&lt;/li&gt;
+&lt;li&gt;Mutex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Indirect Message Passing&lt;/h3&gt;
+&lt;p&gt;Bei diesem Verfahren wird die Kommunikation über eine Message an einen anderen Task gesendet. Dabei erstellt der Sender eine Nachricht und sendet diese an einen Buffer, z.B. einen FIFO (FirstIn-FirstOut). Das RTOS erstellt bei der Systeminitialisierung eine entsprechende Warteschlange für alle Nachrichten und sorgt dafür das bei gleichzeitigem Senden von mehreren Task keine Fehler entstehen. &lt;/p&gt;
+&lt;p&gt;Äquivalentes geschied beim Empfänger Task. Der Scheduler aktiviert den entsprechenden Task wenn eine Nachricht für diesen vorliegt. Dieser liest wieder aus dem Buffer und erhält somit die benötigten Informationen. &lt;/p&gt;
+&lt;p&gt;Ein großer Nachteil dieses Verfahrens ist es das die Nachrichten je nach System mindestens zwei mal Kopiert werden müssen. Dies scheint bei kleinen Nachrichten noch akzeptabel ist jedoch bei großen Nachrichten, wie z.B. bei Ethernet Packeten, sehr Speicheraufwändig und gerade in RTOS unerwünscht. &lt;/p&gt;
+&lt;h3&gt;Direct Message Passing&lt;/h3&gt;
+&lt;p&gt;Um dieses Problem zu beseitigen übergibt man dem Buffer nicht den Dateninhalt, 
+sondern nur einen Zeiger. Dies sorgt dafür das nur der Zeiger mehrmals kopiert wird. Diese Art der Intertaskkomunikation nennt man auch direktes Nachrichenweiterreichen (engl. Direct Message Passing). &lt;/p&gt;
+&lt;h3&gt;Semaphoren&lt;/h3&gt;
+&lt;p&gt;Ein weiteres Verfahren sind sog. Semaphoren. Durch diese wird eine gemeinsame
+Resource gesperrt. Es wird aber keine Nachricht ausgetauscht. Ein Semaphore 
+kann z.B. eingesetzt werden wenn mehrere Tasks auf eine gemeinsame Resource
+zugreifen wollen. So z.B. auf den CAN-Controller oder einen gemeinsamen Speicherbereich für den Datenaustausch. &lt;/p&gt;
+&lt;h2&gt;Echtzeit&lt;/h2&gt;
+&lt;p&gt;D. Kalinsky hat die Echzeit ähnlich wie ich definiert im Post 
+&lt;a href="http://frodo81.github.com/lessons/2012/02/27/Real-Time-Operation-Systems/"&gt;Real Time Operation System&lt;/a&gt;. &lt;/p&gt;
+&lt;pre&gt;
+"Hard" Real Time == correct result MUST BE provided at REQUIRED time deadlines
+&lt;/pre&gt;
+
+&lt;pre&gt;
+"Soft" Real Time == correct result SHOULD BE provided at DESIRED time deadlines
+&lt;/pre&gt;
+
+&lt;p&gt;Der Echzeitbegriff wird noch einmal in Hard und Soft unterteilt. Dies lässt sich
+am einfachsten anhand eines kleinen Beispiels erklären: &lt;/p&gt;
+&lt;p&gt;Das System für das Auslösen eines Airbags ist ein Hard Real Time System, den
+das nicht einhalten einer Deadline für sofort zum Versagen. &lt;/p&gt;
+&lt;p&gt;Ein Soft Real Time System hat keine harte Grenze, die darüber Entscheidet ob das
+System versagt hat oder korrekt Funktioniert. Nachdem die Deadline
+überschritten ist, wird z.B. die Systempreformance degradiert. Tritt nur 
+sporadisch ein Überschreiten der Deadline auf, so wird das häufig gar nicht
+wahrgenommen. &lt;/p&gt;
+&lt;p&gt;Ein Beispiel für ein Soft Real Time System ist ein Satteliten Receiver. Werden 
+die Deadlines für die Decodierung der einzelnen Bildblöcke verpasst, so 
+entstehen im Fernsehbild Störungen (Bildartefakte). Werden nur wenige Blöcke 
+nicht oder falsch decodiert, so wird es den Consumer nicht weiter stören. 
+Mit zunehmender Anzahl an Störungen werden diese immer stärke auffallen und das 
+System wird bei zu vielen Bildfehlern als unbrauchbar angesehen. &lt;/p&gt;
+&lt;h2&gt;Memory Allocation und Memory Protection&lt;/h2&gt;
+&lt;p&gt;Im letzten Kapitel des Tutorials wurde über die Speichereinteilung und 
+Verwaltung in einem RTOS gesprochen. &lt;/p&gt;
+&lt;p&gt;Es gibt zwei unterschiedliche Speicherkonzepte: 
+&lt;em&gt; Memory Allocation
+&lt;/em&gt; Memory Protection&lt;/p&gt;
+&lt;p&gt;Wird der Speicher alloziert, so wird im Laufe der Anwendung der Speicher 
+fragmentiert. Diese Problem nennt man Memory Fragmentation. In non-RTOS 
+Systemen gibt es eine Reihe unterschiedlicher Verfahren für die 
+Defragmentierung. Diese Verfahren sind nicht deterministisch und somit nicht
+für ein Echzeitsystem geeignet. &lt;/p&gt;
+&lt;p&gt;In RTOS werde sog. Pools benutzt. Dabei Teilt man den Speicher in feste 
+vorgegebene Größen ein. Es gibt eine Tabelle/Liste in der die nächsten freien
+Blöcke der jeweiligen Größe stehen. Somit kann schnell der nächste freie Buffer
+gefüllt werden. &lt;/p&gt;
+&lt;p&gt;Bei dem letztgenanten Verfahren mit Pools, kann auch eine Fragmentation
+auftretten. Man unterscheidet die Fragmentationen in external und internal. Bei
+dem Pool Verfahren kann nur die internal Fragmentation auftretten. Diese ist 
+für RTOS Anwendungen nicht kritisch. &lt;/p&gt;</summary><category term="Echtzeit"></category><category term="RTOS"></category></entry><entry><title>RTOS Einfuehrung?</title><link href="http://bjil-wunder.de/RTOS1.html" rel="alternate"></link><updated>2010-12-03T10:20:00+01:00</updated><author><name>Bernd Wunder</name></author><id>tag:bjil-wunder.de,2010-12-03:RTOS1.html</id><summary type="html">&lt;h1&gt;Was ist ein Real Time Operation System?&lt;/h1&gt;
+&lt;p&gt;Bevor man sich mit Echtzeitsystemen beschäftigen kann muss
+sich erst einmal mit der Echtzeit beschäftigen. &lt;/p&gt;
+&lt;h2&gt;Die Echtzeit&lt;/h2&gt;
+&lt;p&gt;Als Beispiel stelle man sich einen klassischen Übertragungsblock vor.
+Legt man auf den Systemeingang eine Anregung, so kann man am Ausgang 
+eine Reaktion beobachten. 
+Erfolgt diese Reaktion sofort, d.h. ohne eine Zeitverzögerung, so spricht man
+von einer Reaktion in Echtzeit. Da jedes technische oder auch nicht technische
+System eine gewisse, evtl. sehr kleine, Reaktionszeit besitzen, definiert man
+den Echtzeitbegriff häufig auch wie folgt: &lt;/p&gt;
+&lt;p&gt;Erfolgt eine Reaktion auf eine Systemanregung innerhalb eines beliebig klein 
+definierten Zeitraums so spricht man von Echtzeitverhalten. Dabei muss für die
+jeweilige Anwendung die Zeitanforderungen definiert werden für die das 
+System quasi ein Echtzeitverhalten aufweist. &lt;/p&gt;
+&lt;p&gt;Dies ist auch der erste kritische Punkt bei der Systemauslegung. Werden die 
+Zeitanforderungen zu scharf gewählt, wird evtl. eine hohe Parallelität im 
+RTOS gefordert, was komplexere Schedulingalgorithmen zur Folge hat. &lt;/p&gt;
+&lt;p&gt;Setzt man im Gegenzug dazu die Zeitanforderungen zu weit herab, so werden 
+Deadlines nicht mehr eingehalten und es werden Task nicht mehr korrekt beendet. &lt;/p&gt;
+&lt;h2&gt;Real Time Operation System RTOS&lt;/h2&gt;
+&lt;p&gt;Ein RTOS ist ein in der Regel spezielles Betriebssystem das auf die 
+definierten Zeitanforderungen zugeschnitten ist. Vor allem ist es 
+deterministisch. D. h. das Verhalten des OS auf ein Signal, Interrupt, Event, 
+... ist bestimmbar und innerhalb der geforderten Schranken. &lt;/p&gt;
+&lt;p&gt;Im Gegensatz dazu ist das Zeitverhalten von general-computing OS stark 
+nicht-deterministisch. Es ist nicht möglich das Zeitverhalten der einzelnen
+Tasks genau zu bestimmen. Die in diesen OS eingesetzten Scheduler Algorithmen
+bemühen sich einen &lt;b&gt;fairen&lt;/p&gt; und &lt;p&gt;performante&lt;/p&gt; Einteilung der 
+Rechenzeit zu gewährleisten. Dabei werden häufig statistische Größen für die 
+Vergabe der Rechenzeit verwendet. So wird häufig Versucht die mittlere 
+Rechenzeit der Tasks zu minimieren. Hat ein Task einen großen Jitter, d.h. eine 
+große Standardabweichung von der mittleren Laufzeit, so wird er mal später und
+mal früher als Erwartet ausgeführt werden. Man kann eine Deadline als nur mit
+einer bestimmten Wahrscheinlichkeit einhalten, das System ist also nicht
+deterministisch. &lt;/p&gt;</summary><category term="Echtzeit"></category><category term="RTOS"></category></entry></feed>

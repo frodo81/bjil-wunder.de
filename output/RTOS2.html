@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+        <meta charset="utf-8" />
+        <title>Tutorial mit David Kalinsky</title>
+        <link rel="stylesheet" href="http://bjil-wunder.de/theme/css/main.css" />
+        <link href="http://bjil-wunder.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="BJIL Wunder Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://bjil-wunder.de/">BJIL Wunder Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="http://bjil-wunder.de/category/rtos.html">RTOS</a></li>
+                    <li><a href="http://bjil-wunder.de/category/vim.html">Vim</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://bjil-wunder.de/RTOS2.html" rel="bookmark"
+           title="Permalink to Tutorial mit David Kalinsky">Tutorial mit David Kalinsky</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-02-28T10:20:00">
+                Di 28 Februar 2012
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://bjil-wunder.de/author/bernd-wunder.html">Bernd Wunder</a>
+        </address>
+<p>In <a href="http://bjil-wunder.de/category/rtos.html">RTOS</a>. </p>
+<p>tags: <a href="http://bjil-wunder.de/tag/echtzeit.html">Echtzeit</a><a href="http://bjil-wunder.de/tag/rtos.html">RTOS</a></p>
+</footer><!-- /.post-info -->      <h1>Tutorial mit David Kalinsky</h1>
+<p>Diese Woche findet zum 10 mal die Embedded World statt. Natürlich bin ich wieder
+mit dabei. Ich besuche den Kurs "Introduction to Real Time Operation Systems" 
+von David Kalinsky. </p>
+<p>Hier poste ich eine kleine Zusammenfassung des Kursinhaltes: 
+Zu Beginn haben wir über die Aufgaben eines RTOS gesprochen. Die wichtigsten 
+Aufgaben sind: </p>
+<ul>
+<li>Die absolut wichtigste Aufgabe ist das Taskmanagement. Wenn man dieses nicht 
+   benötigt, dann braucht man auch kein OS!</li>
+<li>Dynamische Speicherreservierung, malloc, free und so Zeug</li>
+<li>Ein- und Ausgabeschnittstellten (I/O-Interfaces)</li>
+<li>Intertaskkomunikation, Synchronisation</li>
+<li>Timer, der den Grundtakt für die Tasks angibt</li>
+</ul>
+<h2>Task Schedulers</h2>
+<p>Der wichtigste Part innerhalb des Taskmanagement ist der Task Scheduler. 
+Die Aufgabe des Schedulers ist die Berechnung des nächsten auszuführenden
+Tasks. D.h. Welchem Task wird als nächstes Prozessorzeit zugewiesen. </p>
+<p>Dabei gibt es eine Reihe unterschiedlicher Algorithmen nach denen die Tasks 
+Rechenzeit zugewiesen bekommen: </p>
+<ul>
+<li>Endless Loop</li>
+<li>Basic Cyclic Executive</li>
+<li>Time-Driven Cyclic Executive</li>
+<li>Multi-rate Cyclic Executive</li>
+<li>Multi-rate Executive for Periodic Tasks</li>
+<li>Multi-rate Executive with Interrupts</li>
+<li>Priority-based Preemptive Scheduling</li>
+<li>Deadline Scheduling Strategies (EDF, LL, MUF)</li>
+</ul>
+<h2>Informationen über Tasks</h2>
+<p>Bevor man mit dem Design des eigentlichen RTOS anfangen kann, muss man die
+Aufgaben des Systems in möglichst kleine Einzelaufgaben zerlegen. Diese 
+einzelnen möglichst kleinen Aufgaben (engl. chunks) werden dann Tasks genannt.</p>
+<p>Ein Task hat dabei einige Eigenschaften. So besitzt jeder Task eine eindeutige
+ID, Priorität, Type, Stack, Laufzeit, Deadline, Debuginformationen, ... </p>
+<p>Es gibt verschiedene Kategorien:</p>
+<ul>
+<li>Software-triggerd Tasks</li>
+<li>Background Task(s)</li>
+<li>Interrupt-handling Tasks</li>
+<li>Periodic Tasks</li>
+<li>Phantom Tasks</li>
+</ul>
+<p>Jeder Task besitzt verschiedene Zustände während er ausgeführt wird. 
+Dies kann mit einem Zustandsautomaten (Stateflow) abgebildet werden. 
+Es gibt verschieden Möglichkeiten die Zustände eins Tasks 
+einzuteilen. Die einfachste Art besteht aus 3 Zuständen: </p>
+<ul>
+<li>Ready: Der Task ist für bereit ausgeführt zu werden. Er hat alle notwendigen
+     Resourcen für die Ausführung für sich reserviert.</li>
+<li>Running: Der Task erhält den Prozessor und wird darauf ausgeführt. </li>
+<li>Blocked: Es fehlen die benötigten Resourcen oder der Task wird von einem höher
+       priorisierten Task verdrängt. </li>
+</ul>
+<h2>Task Kommuniktaion / Synchronisation</h2>
+<p>In einem System werden die Aufgaben in möglichst kleine Tasks aufgeteilt die 
+gut durch einen Programmierer abgearbeitet werden können. Durch diese Konstruktion des RTOS, muss jeder Task mit anderen Tasks kommunizieren können um da er ja 
+nur eine bestimmte Aufgabe des Gesamtsystems lösen kann. Diese Ergebnis muss er an andere Tasks weitergeben. </p>
+<p>In einem Real Time Operation System gibt es grundlegend Elemente um eine 
+sog. Intertaskkomunikation zu ermöglichen. D.h. einen Informationsaustausch
+zwischen zwei oder mehreren Tasks innerhalb eines Systems.</p>
+<p>Wir haben dabei die folgenden Verfahren besprochen: </p>
+<ul>
+<li>"Indirect" Message Passing</li>
+<li>"Direct" Message Passing</li>
+<li>Semaphoren</li>
+<li>Resource Monitor Tasks</li>
+<li>Mutex</li>
+</ul>
+<h3>Indirect Message Passing</h3>
+<p>Bei diesem Verfahren wird die Kommunikation über eine Message an einen anderen Task gesendet. Dabei erstellt der Sender eine Nachricht und sendet diese an einen Buffer, z.B. einen FIFO (FirstIn-FirstOut). Das RTOS erstellt bei der Systeminitialisierung eine entsprechende Warteschlange für alle Nachrichten und sorgt dafür das bei gleichzeitigem Senden von mehreren Task keine Fehler entstehen. </p>
+<p>Äquivalentes geschied beim Empfänger Task. Der Scheduler aktiviert den entsprechenden Task wenn eine Nachricht für diesen vorliegt. Dieser liest wieder aus dem Buffer und erhält somit die benötigten Informationen. </p>
+<p>Ein großer Nachteil dieses Verfahrens ist es das die Nachrichten je nach System mindestens zwei mal Kopiert werden müssen. Dies scheint bei kleinen Nachrichten noch akzeptabel ist jedoch bei großen Nachrichten, wie z.B. bei Ethernet Packeten, sehr Speicheraufwändig und gerade in RTOS unerwünscht. </p>
+<h3>Direct Message Passing</h3>
+<p>Um dieses Problem zu beseitigen übergibt man dem Buffer nicht den Dateninhalt, 
+sondern nur einen Zeiger. Dies sorgt dafür das nur der Zeiger mehrmals kopiert wird. Diese Art der Intertaskkomunikation nennt man auch direktes Nachrichenweiterreichen (engl. Direct Message Passing). </p>
+<h3>Semaphoren</h3>
+<p>Ein weiteres Verfahren sind sog. Semaphoren. Durch diese wird eine gemeinsame
+Resource gesperrt. Es wird aber keine Nachricht ausgetauscht. Ein Semaphore 
+kann z.B. eingesetzt werden wenn mehrere Tasks auf eine gemeinsame Resource
+zugreifen wollen. So z.B. auf den CAN-Controller oder einen gemeinsamen Speicherbereich für den Datenaustausch. </p>
+<h2>Echtzeit</h2>
+<p>D. Kalinsky hat die Echzeit ähnlich wie ich definiert im Post 
+<a href="http://frodo81.github.com/lessons/2012/02/27/Real-Time-Operation-Systems/">Real Time Operation System</a>. </p>
+<pre>
+"Hard" Real Time == correct result MUST BE provided at REQUIRED time deadlines
+</pre>
+
+<pre>
+"Soft" Real Time == correct result SHOULD BE provided at DESIRED time deadlines
+</pre>
+
+<p>Der Echzeitbegriff wird noch einmal in Hard und Soft unterteilt. Dies lässt sich
+am einfachsten anhand eines kleinen Beispiels erklären: </p>
+<p>Das System für das Auslösen eines Airbags ist ein Hard Real Time System, den
+das nicht einhalten einer Deadline für sofort zum Versagen. </p>
+<p>Ein Soft Real Time System hat keine harte Grenze, die darüber Entscheidet ob das
+System versagt hat oder korrekt Funktioniert. Nachdem die Deadline
+überschritten ist, wird z.B. die Systempreformance degradiert. Tritt nur 
+sporadisch ein Überschreiten der Deadline auf, so wird das häufig gar nicht
+wahrgenommen. </p>
+<p>Ein Beispiel für ein Soft Real Time System ist ein Satteliten Receiver. Werden 
+die Deadlines für die Decodierung der einzelnen Bildblöcke verpasst, so 
+entstehen im Fernsehbild Störungen (Bildartefakte). Werden nur wenige Blöcke 
+nicht oder falsch decodiert, so wird es den Consumer nicht weiter stören. 
+Mit zunehmender Anzahl an Störungen werden diese immer stärke auffallen und das 
+System wird bei zu vielen Bildfehlern als unbrauchbar angesehen. </p>
+<h2>Memory Allocation und Memory Protection</h2>
+<p>Im letzten Kapitel des Tutorials wurde über die Speichereinteilung und 
+Verwaltung in einem RTOS gesprochen. </p>
+<p>Es gibt zwei unterschiedliche Speicherkonzepte: 
+<em> Memory Allocation
+</em> Memory Protection</p>
+<p>Wird der Speicher alloziert, so wird im Laufe der Anwendung der Speicher 
+fragmentiert. Diese Problem nennt man Memory Fragmentation. In non-RTOS 
+Systemen gibt es eine Reihe unterschiedlicher Verfahren für die 
+Defragmentierung. Diese Verfahren sind nicht deterministisch und somit nicht
+für ein Echzeitsystem geeignet. </p>
+<p>In RTOS werde sog. Pools benutzt. Dabei Teilt man den Speicher in feste 
+vorgegebene Größen ein. Es gibt eine Tabelle/Liste in der die nächsten freien
+Blöcke der jeweiligen Größe stehen. Somit kann schnell der nächste freie Buffer
+gefüllt werden. </p>
+<p>Bei dem letztgenanten Verfahren mit Pools, kann auch eine Fragmentation
+auftretten. Man unterscheidet die Fragmentationen in external und internal. Bei
+dem Pool Verfahren kann nur die internal Fragmentation auftretten. Diese ist 
+für RTOS Anwendungen nicht kritisch. </p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://bjil-wunder.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
